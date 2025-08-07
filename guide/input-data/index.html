@@ -1327,10 +1327,9 @@
 </ul>
 <p>Example input data has been provided in the <code>data</code> directory.</p>
 <p>For the previous version of the input data, see <a href="../input-data-legacy/">Input data (legacy)</a>.</p>
-<p>Please note that most column names are case sensitive.</p>
-<p>NOTE! Certain characters are not allowed in the name columns of the ID sheets due to OS restrictions, 
-and may lead to crashes or unexpected behavior. To avoid this, try to not use special characters or letters 
-in the names. </p>
+<p>Please note that most column names are case sensitive. Additionally, certain characters are not allowed 
+in the name columns of the ID sheets due to OS restrictions, and may lead to crashes or unexpected behavior. 
+To avoid this, try to not use special characters or letters in the names. </p>
 <h2 id="probability-distributions">Probability Distributions</h2>
 <p>When the input data contains probability distributions, they will follow this format:</p>
 <ul>
@@ -1342,122 +1341,427 @@ in the names. </p>
 <h2 id="data-structure">Data Structure</h2>
 <h4 id="sheetmeasure"><code>sheet:measure</code></h4>
 <p><img alt="image" src="../images/input/input_id_sheets_measure_new.png" /></p>
-<ul>
-<li>Unique identifiers for measures</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Text</td>
+<td>Unique measure identifier</td>
+</tr>
+<tr>
+<td>measure</td>
+<td>Text</td>
+<td>Measure description / name</td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetactivity"><code>sheet:activity</code></h4>
 <p><img alt="image" src="../images/input/input_id_sheets_activity_new.png" /></p>
-<ul>
-<li>Unique identifiers for activities</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Text</td>
+<td>Unique activity identifier</td>
+</tr>
+<tr>
+<td>activity</td>
+<td>Text</td>
+<td>Activity description / name</td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetpressure"><code>sheet:pressure</code></h4>
 <p><img alt="image" src="../images/input/input_id_sheets_pressure_new.png" /></p>
-<ul>
-<li>Unique identifiers for pressures</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Text</td>
+<td>Unique pressure identifier</td>
+</tr>
+<tr>
+<td>pressure</td>
+<td>Text</td>
+<td>Pressure description / name</td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetstate"><code>sheet:state</code></h4>
 <p><img alt="image" src="../images/input/input_id_sheets_state_new.png" /></p>
-<ul>
-<li>Unique identifiers for states</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Text</td>
+<td>Unique state identifier</td>
+</tr>
+<tr>
+<td>state</td>
+<td>Text</td>
+<td>State description / name</td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetarea"><code>sheet:area</code></h4>
 <p><img alt="image" src="../images/input/input_id_sheets_area_new.png" /></p>
-<ul>
-<li>Unique identifiers for areas</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Text</td>
+<td>Unique area identifier</td>
+</tr>
+<tr>
+<td>area</td>
+<td>Text</td>
+<td>Area description / name</td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetcases"><code>sheet:cases</code></h4>
 <p><img alt="image" src="../images/input/input_cases_new.png" /></p>
 <ul>
-<li>Implemented measure cases, all rows are independent<ul>
-<li><code>column:ID</code>: Unique case id</li>
-<li><code>column:measure</code>: Measure type ID, linked to <code>sheet:measure</code></li>
-<li><code>column:activity</code>: Relevant Activities, linked to <code>sheet:activity</code>, the value 0 (zero) means all relevant activities affected by the measure</li>
-<li><code>column:pressure</code>: Relevant Pressures, linked to <code>sheet:pressure</code>, the value 0 (zero) means all relevant pressures affected by the measure</li>
-<li><code>column:state</code>: Relevant States, linked to <code>sheet:state</code>, the value 0 (zero) means all relevant states affected by the measure</li>
-<li><code>column:coverage</code>: Multiplier (fraction), represents how much of the area is covered by the measure</li>
-<li><code>column:implementation</code>: Multiplier (fraction), represents how much of the measure is implemented</li>
-<li><code>column:area_id</code>: Area ID, linked to <code>sheet:Area ID</code></li>
+<li>Implemented measure cases, all rows are independent</li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Text</td>
+<td>Unique case identifier</td>
+</tr>
+<tr>
+<td>measure</td>
+<td>Text</td>
+<td>Measure ID, linked to <code>sheet:measure</code></td>
+</tr>
+<tr>
+<td>activity</td>
+<td>Text</td>
+<td>Activity ID, linked to <code>sheet:activity</code>, the value 0 (zero) means all relevant activities affected by the measure</td>
+</tr>
+<tr>
+<td>pressure</td>
+<td>Text</td>
+<td>Pressure ID, linked to <code>sheet:pressure</code>, the value 0 (zero) means all relevant pressures affected by the measure</td>
+</tr>
+<tr>
+<td>state</td>
+<td>Text</td>
+<td>State ID, linked to <code>sheet:state</code>, the value 0 (zero) means all relevant states affected by the measure</td>
+</tr>
+<tr>
+<td>coverage</td>
+<td>Number</td>
+<td>Multiplier (fraction), represents how much of the area is covered by the measure</td>
+</tr>
+<tr>
+<td>implementation</td>
+<td>Number</td>
+<td>Multiplier (fraction), represents how much of the measure is implemented</td>
+</tr>
+<tr>
+<td>area_id</td>
+<td>Text</td>
+<td>Area ID, linked to <code>sheet:Area ID</code></td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetmeasure_effects"><code>sheet:measure_effects</code></h4>
 <p><img alt="image" src="../images/input/input_measure_effects_new.png" /></p>
 <ul>
-<li>Activity-Pressure links, how much the individual activities contribute to the pressures<ul>
-<li><code>column:activity</code>: Activity ID, linked to <code>sheet:activity</code></li>
-<li><code>column:pressure</code>: Pressure ID, linked to <code>sheet:pressure</code></li>
-<li><code>column:area_id</code>: Area ID, linked to <code>sheet:area</code></li>
-<li><code>column:contribution</code>: Measure reduction effect, probability distribution, see <a href="#probability-distributions">Probability Distributions</a></li>
+<li>Activity-Pressure links, how much the individual activities contribute to the pressures</li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activity</td>
+<td>Text</td>
+<td>Activity ID, linked to <code>sheet:activity</code></td>
+</tr>
+<tr>
+<td>pressure</td>
+<td>Text</td>
+<td>Pressure ID, linked to <code>sheet:pressure</code></td>
+</tr>
+<tr>
+<td>area_id</td>
+<td>Text</td>
+<td>Area ID, linked to <code>sheet:area</code></td>
+</tr>
+<tr>
+<td>contribution</td>
+<td>Text</td>
+<td>Measure reduction effect, probability distribution, see <a href="#probability-distributions">Probability Distributions</a></td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetactivity_contributions"><code>sheet:activity_contributions</code></h4>
 <p><img alt="image" src="../images/input/input_activity_contributions_new.png" /></p>
 <ul>
-<li>Measure reduction effects on activity-pressure pairs<ul>
-<li><code>column:measure</code>: Activity ID, linked to <code>sheet:measure</code></li>
-<li><code>column:activity</code>: Activity ID, linked to <code>sheet:activity</code></li>
-<li><code>column:pressure</code>: Pressure ID, linked to <code>sheet:pressure</code></li>
-<li><code>column:state</code>: Pressure ID, linked to <code>sheet:state</code></li>
-<li><code>column:probability</code>: Activity contribution, probability distribution, see <a href="#probability-distributions">Probability Distributions</a></li>
+<li>Measure reduction effects on activity-pressure pairs</li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activity</td>
+<td>Text</td>
+<td>Activity ID, linked to <code>sheet:activity</code></td>
+</tr>
+<tr>
+<td>pressure</td>
+<td>Text</td>
+<td>Pressure ID, linked to <code>sheet:pressure</code></td>
+</tr>
+<tr>
+<td>state</td>
+<td>Text</td>
+<td>Pressure ID, linked to <code>sheet:state</code></td>
+</tr>
+<tr>
+<td>probability</td>
+<td>Text</td>
+<td>Activity contribution, probability distribution, see <a href="#probability-distributions">Probability Distributions</a></td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetpressure_contributions"><code>sheet:pressure_contributions</code></h4>
 <p><img alt="image" src="../images/input/input_pressure_contributions_new.png" /></p>
 <ul>
-<li>Pressure-State links, how much the individual pressures contribute to the states<ul>
-<li><code>column:state</code>: State ID, linked to <code>sheet:state</code></li>
-<li><code>column:pressure</code>: Pressure ID, linked to <code>sheet:pressure</code></li>
-<li><code>column:area_id</code>: Area ID, linked to <code>sheet:area</code></li>
-<li><code>column:contribution</code>: Pressure contribution, probability distribution, see <a href="#probability-distributions">Probability Distributions</a></li>
+<li>Pressure-State links, how much the individual pressures contribute to the states</li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state</td>
+<td>Text</td>
+<td>State ID, linked to <code>sheet:state</code></td>
+</tr>
+<tr>
+<td>pressure</td>
+<td>Text</td>
+<td>Pressure ID, linked to <code>sheet:pressure</code></td>
+</tr>
+<tr>
+<td>area_id</td>
+<td>Text</td>
+<td>Area ID, linked to <code>sheet:area</code></td>
+</tr>
+<tr>
+<td>contribution</td>
+<td>Text</td>
+<td>Pressure contribution, probability distribution, see <a href="#probability-distributions">Probability Distributions</a></td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetthresholds"><code>sheet:thresholds</code></h4>
 <p><img alt="image" src="../images/input/input_thresholds_new.png" /></p>
 <ul>
-<li>Environmental target thresholds, how much the individual states need to be reduced to reach the set targets<ul>
-<li><code>column:state</code>: State ID, linked to <code>sheet:state</code></li>
-<li><code>column:area_id</code>: Area ID, linked to <code>sheet:area</code></li>
-<li><code>column:###</code>: Subsequent columns are treated as probability distributions for target reduction thresholds, see <a href="#probability-distributions">Probability Distributions</a></li>
+<li>Environmental target thresholds, how much the individual states need to be reduced to reach the set targets</li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>state</td>
+<td>Text</td>
+<td>State ID, linked to <code>sheet:state</code></td>
+</tr>
+<tr>
+<td>area_id</td>
+<td>Text</td>
+<td>Area ID, linked to <code>sheet:area</code></td>
+</tr>
+<tr>
+<td>###</td>
+<td>Text</td>
+<td>Subsequent columns are treated as probability distributions for target reduction thresholds, see <a href="#probability-distributions">Probability Distributions</a></td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetoverlaps"><code>sheet:overlaps</code></h4>
 <p><img alt="image" src="../images/input/input_overlaps_new.png" /></p>
 <ul>
-<li>Interaction between separate measures, how joint implementation affects measure efficiency<ul>
-<li><code>column:overlap</code>: Overlap ID</li>
-<li><code>column:pressure</code>: Pressure ID, linked to <code>sheet:pressure</code></li>
-<li><code>column:activity</code>: Activity ID, linked to <code>sheet:activity</code></li>
-<li><code>column:overlapping</code>: Overlapping measure ID, linked to <code>sheet:measure</code></li>
-<li><code>column:overlapped</code>: Overlapped measure ID, linked to <code>sheet:measure</code></li>
-<li><code>column:multiplier</code>: Multiplier (fraction), how much of the <code>column:overlapped</code> measure's effect will be observed if <code>column:overlapping</code> is also implemented</li>
+<li>Interaction between separate measures, how joint implementation affects measure efficiency</li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overlap</td>
+<td>Text</td>
+<td>Overlap ID</td>
+</tr>
+<tr>
+<td>pressure</td>
+<td>Text</td>
+<td>Pressure ID, linked to <code>sheet:pressure</code></td>
+</tr>
+<tr>
+<td>activity</td>
+<td>Text</td>
+<td>Activity ID, linked to <code>sheet:activity</code></td>
+</tr>
+<tr>
+<td>overlapping</td>
+<td>Text</td>
+<td>Overlapping Measure ID, linked to <code>sheet:measure</code></td>
+</tr>
+<tr>
+<td>overlapped</td>
+<td>Text</td>
+<td>Overlapped Measure ID, linked to <code>sheet:measure</code></td>
+</tr>
+<tr>
+<td>multiplier</td>
+<td>Number</td>
+<td>Multiplier (fraction), how much of the <code>column:overlapped</code> measure's effect will be observed if <code>column:overlapping</code> is also implemented</td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetdevelopment_scenarios"><code>sheet:development_scenarios</code></h4>
 <p><img alt="image" src="../images/input/input_development_scenarios_new.png" /></p>
 <ul>
-<li>Activity development scenarios, how much each activity is expected to change during various scenarios, each value is a multiplier<ul>
-<li><code>column:activity</code>: Activity ID, linked to <code>sheet:activity</code></li>
-<li><code>column:###</code>: Subsequent columns are treated as the change / scenarios (fraction)</li>
+<li>Activity development scenarios, how much each activity is expected to change during various scenarios, each value is a multiplier</li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activity</td>
+<td>Text</td>
+<td>Activity ID, linked to <code>sheet:activity</code></td>
+</tr>
+<tr>
+<td>###</td>
+<td>Number</td>
+<td>Subsequent columns are treated as the change / scenarios (fraction)</td>
+</tr>
+</tbody>
+</table>
 <h4 id="sheetsubpressures"><code>sheet:subpressures</code></h4>
 <p><img alt="image" src="../images/input/input_subpressures_new.png" /></p>
 <ul>
-<li>Links between separate pressures, where <em>subpressures</em> make up part of <em>state pressures</em><ul>
-<li><code>column:reduced pressure</code>: Subpressure ID, linked to <code>sheet:pressure</code></li>
-<li><code>column:state pressure</code>: State pressure ID, linked to <code>sheet:pressure</code></li>
-<li><code>column:equivalence</code>: Equivalence between <code>column:reduced pressure</code> and <code>column:state pressure</code>, i.e. how much of the <em>state pressure</em> is made up of the <em>subpressure</em>, where values between 0 and 1 are treated as fractions, and other values as either no quantified equivalence or no reduction from pressures</li>
-<li><code>column:state</code>: State ID, linked to <code>sheet:state</code></li>
-<li><code>column:multiplier</code>: Multiplier (fraction), how much of the reduction in <code>column:reduced pressure</code> should be applied to <code>column:state pressure</code>, determined from <code>column:equivalence</code></li>
+<li>Links between separate pressures, where <em>subpressures</em> make up part of <em>state pressures</em></li>
 </ul>
-</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reduced pressure</td>
+<td>Text</td>
+<td>Subpressure ID, linked to <code>sheet:pressure</code></td>
+</tr>
+<tr>
+<td>state pressure</td>
+<td>Text</td>
+<td>State pressure ID, linked to <code>sheet:pressure</code></td>
+</tr>
+<tr>
+<td>equivalence</td>
+<td>Number</td>
+<td>Equivalence between <code>column:reduced pressure</code> and <code>column:state pressure</code>, i.e. how much of the <em>state pressure</em> is made up of the <em>subpressure</em>, where values between 0 and 1 are treated as fractions, and other values as either no quantified equivalence or no reduction from pressures</td>
+</tr>
+<tr>
+<td>state</td>
+<td>Text</td>
+<td>State ID, linked to <code>sheet:state</code></td>
+</tr>
+<tr>
+<td>multiplier</td>
+<td>Number</td>
+<td>Multiplier (fraction), how much of the reduction in <code>column:reduced pressure</code> should be applied to <code>column:state pressure</code>, determined from <code>column:equivalence</code></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1478,7 +1782,7 @@ in the names. </p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 4, 2025 12:05:32 UTC">August 4, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 7, 2025 10:32:06 UTC">August 7, 2025</span>
   </span>
 
     
